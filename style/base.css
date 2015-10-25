@@ -1,0 +1,195 @@
+body {
+	overflow: hidden;
+	width: 100%;
+	height: 1500px;
+	background: -webkit-linear-gradient(#CCC, #FFF);
+}
+
+.holder {
+	position: absolute;
+	top: 20%;
+	left: 30%;
+	
+}
+
+.big-circles {
+	width: 30em;
+	height: 30em;
+	position: absolute;
+	animation: rotate 20s linear infinite;
+}
+
+.big-squares {
+	width: 15em;
+	height: 15em;
+	position: absolute;
+	top: 7.5em;
+	left: 15em;
+}
+
+
+
+.small-circles {
+	width: 35em;
+	height: 35em;
+	position: absolute;
+	top: -2.5em;
+	left: -2.5em;
+	animation: rotate 40s linear infinite;
+	
+}
+
+@keyframes rotate {
+	100% {
+		transform-origin: 50% 50%;
+		transform: rotateZ(-360deg);
+	}
+}
+
+@keyframes awesome {
+	0% {
+		top: 1500px;
+	}
+
+	20% {
+		top: 0px;
+	}
+	20%, 30% {
+		transform: translateX(-20px);
+	}
+	30%, 40% {
+		transform: translateX(40px);
+	}
+	40%,50% {
+		transform: translateX(-20px);
+	}
+	50%, 60% {
+		transform-origin: 50% 50%;
+		transform: rotateZ(0deg);
+	}
+	60%, 80% {
+		transform: rotateZ(-360deg);
+	}
+}
+
+.circle {
+	border-radius: 50%;
+	position: absolute;
+	top: 0px;
+	box-shadow: inset 0px 0px 5px #333;
+	-webkit-transition: all 1s ease-in-out;
+	opacity: 0;
+	background: rgba(200,40,40,.7);
+	animation: awesome 7s 1;
+}
+
+.square {
+	border-radius: 25%;
+	position: absolute;
+	top: 0px;
+	box-shadow:  inset 0px 0px 5px #333;
+	-webkit-transition: all 1s ease-in-out;
+	opacity: 0;
+	background: rgba(200,40,40,.7);
+	animation: awesome 5s 1;
+}
+
+.big {
+	width: 15em;
+	height: 15em;
+	left: calc(50% - 7.5em);
+	transform-origin: 50% 15em;
+
+}
+
+.biggest {
+	width: 15em;
+	height: 15em;
+	left: calc(50% - 15em);
+	transform-origin: 50% 50%;
+
+}
+
+.small {
+	width: 5em;
+	height: 5em;
+	left: calc(50% - 2.5em);
+	transform-origin: 50% 17.5em;
+}
+
+.one {
+	background: rgba(204, 55 , 55, .7);
+	transform: rotateZ(-45deg);
+}
+
+.two {
+	background: rgba(176,00,181,.7);
+	transform: rotateZ(-90deg);
+}
+
+.three {
+	background: rgba(60,06,30,.7);
+	transform: rotateZ(-135deg);
+}
+
+.four {
+	background: rgba(11, 00, 11, .7);
+	transform: rotateZ(-180deg);
+}
+
+.five {
+	background: rgba(209, 29, 05);
+	transform: rotateZ(-225deg);
+}
+
+.six {
+	background: rgba(20,80,75,.7);
+	transform: rotateZ(-270deg);
+}
+
+.seven {
+	background: rgba(226,07,28,.7);
+	transform: rotateZ(-315deg);
+}
+
+.eight {
+	background: rgba(02,172,30,.7);
+	transform: rotateZ(-360deg);
+}
+
+.big-squares .one {
+	transform:rotateZ(0deg);
+	animation: rotate 15s linear infinite;
+	background: rgba(36,01,57,.7);       
+}
+
+.cool {
+	box-shadow:
+        inset 0 0 50px #fff,      /* inner white */
+        inset 20px 0 80px #f0f,   /* inner left magenta short */
+        inset -20px 0 80px #0ff,  /* inner right cyan short */
+        inset 20px 0 300px #f0f,  /* inner left magenta broad */
+        inset -20px 0 300px #0ff, /* inner right cyan broad */
+        0 0 50px #fff,            /* outer white */
+        -10px 0 80px #f0f,        /* outer left magenta */
+        10px 0 80px #0ff; 		/* outer right cyan */
+}
+
+.big-squares .two {
+	transform: rotateZ(0deg);
+	background: rgba(240,43,29,.3);
+	
+}
+
+.big-squares .two::after {
+	content: "Ritesh Kukreja";
+	display: block;
+	position: absolute;
+	top: 45%;
+	text-align: center;
+	color: #EEE;
+	font-family: arial;
+	font-size: 28px;
+	width: 100%;
+	text-shadow: 2px 2px #000000;
+}
